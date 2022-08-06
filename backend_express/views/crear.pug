@@ -1,0 +1,44 @@
+head
+  meta(charset='utf-8')
+  title Registro
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css')
+
+  body
+    p 
+    .modal-dialog
+        .modal-content
+          // Modal Header
+          .modal-header
+            button.close(type="button", data-dismiss="modal")
+              span(aria-hidden="true") ×
+              span.sr-only Close
+            h4#myModalLabel.modal-title
+              | Registrar mascota
+          // Modal Body
+          .modal-body
+            form(role='form' method='POST' action='http://localhost:3000/usuario')
+              div.form-group
+                label(for='namePet') Nombre de la mascota:
+                input#name.form-control(type='text', placeholder='max' name='namePet')
+              div.form-group
+                label(for='agePet') Edad de la mascota:
+                input#email.form-control(type='text', placeholder='2 años' name='agePet')
+              div.form-group
+                label(for='typePet') Tipo de mascota:
+                input#email.form-control(type='text', placeholder='Perro/Gato' name='typePet')
+              div.form-group
+                label(for='breedPet') Raza de la mascota:
+                input#email.form-control(type='text', placeholder='Pitbull' name='breedPet')
+              div.form-group
+                label(for='description') Descripción:
+                input#email.form-control(type='text', placeholder='Es agresivo' name='description')
+              div.form-group
+                label(for='toyName') Nombre del juguete:
+                input#email.form-control(type='text', placeholder='Buzz Lightyear ' name='toyName')
+              div.form-group
+                label(for='toyColor') Color del juguete:
+                input#email.form-control(type='text', placeholder='Rojo' name='toyColor')
+                button.btn.btn-primary(type="submit", name="Create") Create
+          // Modal Footer
+          .modal-footer
+            h4 footer
